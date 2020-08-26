@@ -1,0 +1,29 @@
+2020-08-26 19:31:58,585 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:32:01,981 - __main__ - INFO - Recognized automatic responder in audio/1.wav file
+2020-08-26 19:33:55,224 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:33:58,614 - __main__ - INFO - Recognized automatic responder in audio/1.wav file
+2020-08-26 19:36:54,633 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:36:54,633 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:36:56,627 - __main__ - INFO - Recognized automatic responder in audio/1.wav file
+2020-08-26 19:40:56,314 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:40:57,895 - __main__ - INFO - Recognized people in audio/2.wav file
+2020-08-26 19:41:46,825 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:41:48,225 - __main__ - INFO - Recognized people in audio/2.wav file
+2020-08-26 19:43:40,842 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:43:42,689 - __main__ - INFO - Recognized people in audio/3.wav file
+2020-08-26 19:45:59,417 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:46:00,469 - __main__ - INFO - Recognized people in audio/4.wav file
+2020-08-26 19:46:24,981 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:46:24,981 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:49:23,976 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:49:23,976 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:49:25,361 - __main__ - INFO - Recognized people in audio/2.wav file
+2020-08-26 19:51:19,167 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:51:19,167 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:51:21,263 - __main__ - INFO - Recognized automatic responder in audio/1.wav file
+2020-08-26 19:51:55,161 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:51:55,161 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:51:56,988 - __main__ - INFO - Recognized people in audio/3.wav file
+2020-08-26 19:52:15,978 - __main__ - INFO - Initializing of recognition class complete
+2020-08-26 19:52:15,978 - __main__ - WARNING - Wrong type of number
+2020-08-26 19:52:17,553 - __main__ - INFO - Recognized people in audio/4.wav file

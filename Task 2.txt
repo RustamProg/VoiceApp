@@ -1,0 +1,57 @@
+!!!ПРЕЖДЕ ЧЕМ НАПИСАТЬ SQL ЗАПРОС, Я СДЕЛАЛ СЛЕДУЮЩИЕ ШАГИ:   (!!!САМ SQL ЗАПРОС В САМОМ НИЗУ)
+
+CREATE TABLE voicetable (
+	id SERIAL PRIMARY KEY,
+	date DATE,
+	time TIME,
+	result_step1 VARCHAR,
+	result_step2 VARCHAR,
+	phone_number VARCHAR,
+	audio_duration VARCHAR,
+	recognition_result VARCHAR
+)
+
+create table project (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR,
+	description VARCHAR
+)
+
+create table server (
+	id SERIAL PRIMARY KEY,
+	name VARCHAR,
+	ip_address VARCHAR,
+	description VARCHAR
+)
+
+alter table voicetable add project_col varchar;
+alter table voicetable add server_col varchar;
+
+update voicetable set project_col='incoming', server_col='main_server' where id % 2 = 0
+update voicetable set project_col='incoming', server_col='secondary_server' where id = 1;
+update voicetable set project_col='alfa_warm', server_col='secondary_server' where id = 3;
+update voicetable set project_col='alfa_warm', server_col='main_server' where id = 5;
+update voicetable set project_col='alfa_warm', server_col='main_server' where id = 7;
+
+insert into server (name, ip_address, description) values ('main_server', '123.123.123.213', 'its a main server');
+insert into server (name, ip_address, description) values ('secondary_server', '192.127.0.1', 'its a secondary server');
+
+insert into project (name, description) values ('incoming', 'its an incoming project');
+insert into project (name, description) values ('alfa_warm', 'its an alfa_warm project');
+
+alter table project add unique(name); # забыл сделать уникальными
+alter table server add unique(name);
+
+alter table voicetable add foreign key (project_col) references project(name);
+alter table voicetable add foreign key (server_col) references server(name);
+
+update voicetable set result_step1 = 'null' where result_step1 is null; # Вообще нужно было установить дефолтное значение
+update voicetable set result_step2 = 'null' where result_step2 is null;
+
+
+
+ВОТ САМ ЗАПРОС. Было сложно понять, что именно требуется
+select date, count(result_step1), result_step1, result_step2, audio_duration, project_col, server_col
+from voicetable
+where date between '2020-01-01' and '2020-12-12'
+group by date, result_step1, result_step2, audio_duration, project_col, server_col 
